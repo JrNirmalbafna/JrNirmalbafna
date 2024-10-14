@@ -17,6 +17,7 @@ void pattern12();
 void pattern13();
 void pattern14();
 void pattern15();
+void pattern16();
 
 int main()
 {
@@ -53,6 +54,8 @@ int main()
     cout << "14. Number Pyramid Pattern." << endl;
     cout << endl;
     cout << "15. Dabangg Pattern." << endl;
+    cout<<endl;
+    cout << "16. Zig Zag pattern."<< endl;
     cout << endl;
     cin >> no_of_pattern;
     cout << endl;
@@ -117,6 +120,10 @@ int main()
 
     case 15:
         pattern15();
+        break;
+
+    case 16:
+        pattern16();
         break;
 
     default:
@@ -544,4 +551,28 @@ void pattern15()
         }
         cout << endl;
     }
+}
+void pattern16()
+{
+    int n;
+    cout<<"Enter the no. of stars : "<<endl;
+    cin>>n;
+    for (int i = 1; i<=3;i++)
+    {
+        for (int j = 1; j <=n; j++)
+        {
+            if (((i+j)%4==0)||(i==2 && j%4==0))
+            {
+                cout<<"* ";
+            }
+            else{
+                cout<<"  ";
+            }
+            
+        }
+        cout<<endl;
+        
+    }
+    
+    
 }
